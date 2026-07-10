@@ -1731,6 +1731,10 @@ textarea.form-control {
     grid-template-columns: 1fr;
     gap: 50px;
   }
+
+  .faq-intro {
+    position: static;
+  }
   
   /* Product Page */
   .product-grid {

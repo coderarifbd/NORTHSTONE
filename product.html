@@ -170,7 +170,7 @@
           </div>
 
           <button class="btn btn-primary btn-block" id="purchaseBtn" style="font-size: 1.05rem; padding: 16px 28px;">
-            Purchase &amp; Download Guide
+            ADD TO CART
           </button>
 
           <div id="checkoutStatus"
@@ -449,12 +449,12 @@
 
       checkoutStatus.style.display = 'block';
       checkoutStatus.style.color = 'var(--color-gold-muted)';
-      checkoutStatus.innerText = 'Processing secure payment connection...';
+      checkoutStatus.innerText = 'Adding item to cart...';
       purchaseBtn.disabled = true;
-      purchaseBtn.innerText = 'Processing...';
+      purchaseBtn.innerText = 'Adding...';
 
       setTimeout(() => {
-        checkoutStatus.innerText = 'Payment confirmed. Preparing your download...';
+        checkoutStatus.innerText = 'Processing secure checkout...';
 
         setTimeout(() => {
           // Trigger PDF download
@@ -466,8 +466,8 @@
           document.body.removeChild(link);
 
           checkoutStatus.style.color = '#4caf50';
-          checkoutStatus.innerText = '✓ Purchase complete! Your download has started.';
-          purchaseBtn.innerText = 'Download Started ✓';
+          checkoutStatus.innerText = '✓ Added to cart! Your download has started.';
+          purchaseBtn.innerText = 'Added to Cart ✓';
         }, 1500);
       }, 1500);
     });
